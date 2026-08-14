@@ -29,13 +29,27 @@ StudentHub is a web-based student portal designed to provide students with a cen
 ## Project Structure
 
 ```text
-StudentHub/
-├── index.html
+Student-Hub/
+│
 ├── pages/
-├── css/
-├── js/
-├── images/
-└── docs/
+│   ├── login.html
+│   ├── dashboard.html
+│   ├── attendance.html
+│   ├── assignments.html
+│   ├── courses.html
+│   ├── timetable.html
+│   ├── announcements.html
+│   ├── events.html
+│   ├── profile.html
+│   ├── settings.html
+│   └── contact.html
+│
+├── docs/
+│   ├── requirement-analysis.docx
+│   ├── sitemap.png
+│   └── wireframes.pdf
+│
+└── README.md
 ```
 
 ## Project Goal
