@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+h1 {
+    text-align: center;
+    color: blue;
+}
+
+div a {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+div a:hover {
+    color: blue;
+}
+
+.container {
+    border: 2px solid black;
+    width: 700px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 3px 3px 8px gray;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    color: blue;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+}

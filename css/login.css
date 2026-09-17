@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+h1 {
+    text-align: center;
+    color: blue;
+}
+
+.login-box {
+    border: 2px solid black;
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 3px 3px 8px gray;
+}
+
+.logo {
+    display: block;
+    margin: auto;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 180px;
+    padding: 5px;
+}
+
+input[type="submit"] {
+    padding: 8px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: darkblue;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer a:hover {
+    color: blue;
+}
