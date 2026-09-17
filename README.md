@@ -44,6 +44,19 @@ Student-Hub/
 │   ├── settings.html
 │   └── contact.html
 │
+├── css/
+│   ├── login.css
+│   ├── dashboard.css
+│   ├── attendance.css
+│   ├── assignments.css
+│   ├── courses.css
+│   ├── timetable.css
+│   ├── announcements.css
+│   ├── events.css
+│   ├── profile.css
+│   ├── settings.css
+│   └── contact.css
+│
 ├── docs/
 │   ├── requirement-analysis.docx
 │   ├── sitemap.png
