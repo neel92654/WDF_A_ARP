@@ -58,11 +58,12 @@ Student-Hub/
 │   └── contact.css
 │
 ├── docs/
-│   ├── requirement-analysis.docx
-│   ├── sitemap.png
-│   └── wireframes.pdf
+│   ├── P1Wireframes.svg
+│   └── SiteMap.png
 │
 └── README.md
+|
+└── Requirement_analysis.docx
 ```
 
 ## Project Goal
