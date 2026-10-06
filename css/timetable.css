@@ -1,42 +1,35 @@
+:root {
+    --bs-primary: #0d47a1;
+    --bs-primary-rgb: 13, 71, 161;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #f8f9fa;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-h1 {
-    text-align: center;
-    color: blue;
+.table-responsive {
+    min-width: 100%;
 }
 
-div a {
-    text-decoration: none;
-    color: black;
-    padding: 5px;
+.letter-spacing-1 {
+    letter-spacing: 1px;
 }
 
-div a:hover {
-    color: blue;
+[data-bs-theme="dark"] body {
+    background-color: #121212;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
+[data-bs-theme="dark"] .bg-light {
+    background-color: #1e1e1e !important;
 }
 
-table,
-tr,
-th,
-td {
-    border: 1px solid black;
+[data-bs-theme="dark"] .card-header.bg-white {
+    background-color: #242424 !important;
+    border-bottom-color: #333333;
 }
 
-th,
-td {
-    padding: 10px;
-    text-align: center;
-}
-
-th {
-    background-color: #d9d9d9;
+[data-bs-theme="dark"] .bg-warning-subtle {
+    background-color: #332b00 !important;
+    color: #ffecb3 !important;
 }

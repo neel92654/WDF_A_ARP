@@ -1,70 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
     <meta charset="UTF-8">
-    <title>About Student Hub</title>
-
-    <link rel="stylesheet" href="css/about.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Student Hub - CHARUSAT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/about.css">
 </head>
+<body class="d-flex flex-column min-vh-100">
 
-<body>
-    <br>
-    <h1>CHARUSAT STUDENT HUB</h1>
-    <div style="text-align:center;">
-        <p>CHARUSAT Logo</p>
-    </div>
-    <br>
-    <div style="text-align:center;">
-        <a href="dashboard.html">Home</a> |
-        <a href="attendance.html">Attendance</a> |
-        <a href="assignments.html">Assignments</a> |
-        <a href="courses.html">Courses</a> |
-        <a href="timetable.html">Timetable</a> |
-        <a href="announcements.html">Announcements</a> |
-        <a href="events.html">Events</a> |
-        <a href="profile.html">Profile</a> |
-        <a href="settings.html">Settings</a>
-    </div>
-    <br>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
     <div class="container">
-        <h2>About Student Hub Portal</h2>
-        <p>
-            Student Hub Portal is a simple web-based platform designed for
-            CHARUSAT students to access their important academic information
-            in one place.
-        </p>
-        <h3>Purpose</h3>
-        <p>
-            The main purpose of Student Hub is to provide students with an
-            easy way to access their attendance, assignments, courses,
-            timetable, announcements, events and profile information.
-        </p>
-        <h3>Features</h3>
-        <ul>
-            <li>Student Dashboard</li>
-            <li>Attendance Details</li>
-            <li>Assignment Information</li>
-            <li>Course Details</li>
-            <li>Weekly Timetable</li>
-            <li>Announcements and Notices</li>
-            <li>Upcoming Events</li>
-            <li>Student Profile</li>
-            <li>Account Settings</li>
-            <li>Contact Information</li>
-        </ul>
-        <h3>Technologies Used</h3>
-        <p>
-            The current version of the Student Hub Portal is developed using
-            HTML and CSS.
-        </p>
+        <a class="navbar-brand d-flex align-items-center" href="dashboard.html">
+            <img src="../images/image.png" alt="CHARUSAT Logo" height="36" class="d-inline-block align-text-top me-2 bg-white rounded p-1">
+            <span class="fw-bold">CHARUSAT STUDENT HUB</span>
+        </a>
+        <div class="d-flex align-items-center order-lg-last ms-auto">
+            <button class="btn btn-outline-light btn-sm me-2 me-lg-0" id="themeToggle" onclick="toggleTheme()" aria-label="Toggle theme" title="Toggle Light/Dark Theme">
+                <span id="themeIcon">☾</span> <span id="themeText" class="d-none d-sm-inline">Dark</span>
+            </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="dashboard.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="attendance.html">Attendance</a></li>
+                <li class="nav-item"><a class="nav-link" href="assignments.html">Assignments</a></li>
+                <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                <li class="nav-item"><a class="nav-link" href="timetable.html">Timetable</a></li>
+                <li class="nav-item"><a class="nav-link" href="announcements.html">Announcements</a></li>
+                <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="settings.html">Settings</a></li>
+                <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+            </ul>
+        </div>
     </div>
-    <br><br>
-    <hr>
-    <div class="footer">
-        <a href="about.html">About</a> |
-        <a href="contact.html">Contact</a> |
-        <a href="login.html">Logout</a>
+</nav>
+
+<main class="container my-4 flex-grow-1">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 pb-2 border-bottom">
+        <div>
+            <h2 class="h3 fw-bold text-primary mb-1">About Student Hub Portal</h2>
+            <p class="text-muted mb-0">
+                <span><strong>Institutional Portal:</strong> CHARUSAT Student Information System</span>
+            </p>
+        </div>
     </div>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-white py-3">
+            <h5 class="mb-0 fw-bold text-primary">Overview &amp; Purpose</h5>
+        </div>
+        <div class="card-body p-4">
+            <p class="lead fs-6 text-muted">
+                <strong>Student Hub Portal</strong> is a centralized web-based platform designed for
+                CHARUSAT students to access their important academic information in one convenient location.
+            </p>
+            <h6 class="fw-bold text-primary mt-4 mb-2">Purpose</h6>
+            <p class="text-muted">
+                The main purpose of Student Hub is to provide students with an easy way to access their attendance records,
+                assignments, registered courses, weekly timetable, announcements, events, and profile information.
+            </p>
+
+            <h6 class="fw-bold text-primary mt-4 mb-2">Core Features</h6>
+            <div class="row g-2 mb-3">
+                <div class="col-12 col-md-6"><span class="badge bg-primary me-2">&check;</span> Student Dashboard &amp; Overview</div>
+                <div class="col-12 col-md-6"><span class="badge bg-primary me-2">&check;</span> Real-time Attendance Analytics</div>
+                <div class="col-12 col-md-6"><span class="badge bg-primary me-2">&check;</span> Coursework Submissions &amp; Deadlines</div>
+                <div class="col-12 col-md-6"><span class="badge bg-primary me-2">&check;</span> Semester Course Catalog &amp; Credits</div>
+                <div class="col-12 col-md-6"><span class="badge bg-primary me-2">&check;</span> Structured Weekly Timetable</div>
+                <div class="col-12 col-md-6"><span class="badge bg-primary me-2">&check;</span> Live Campus Events Directory</div>
+                <div class="col-12 col-md-6"><span class="badge bg-primary me-2">&check;</span> Student Profile &amp; Preferences</div>
+                <div class="col-12 col-md-6"><span class="badge bg-primary me-2">&check;</span> Support Desk &amp; Inquiries</div>
+            </div>
+
+            <h6 class="fw-bold text-primary mt-4 mb-2">Technologies Used</h6>
+            <p class="text-muted mb-0">
+                Developed using <strong>HTML5</strong>, <strong>Bootstrap 5</strong>, <strong>Vanilla JavaScript</strong>, <strong>JSON</strong>, and <strong>PHP with CSV Storage</strong>.
+            </p>
+        </div>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-header bg-white py-3">
+            <h5 class="mb-0 fw-bold text-primary" id="faqTitle">Frequently Asked Questions (FAQ)</h5>
+        </div>
+        <div class="card-body p-4">
+            <div class="list-group">
+                <div class="list-group-item p-3 mb-2 border rounded">
+                    <button class="btn btn-link text-decoration-none text-start text-dark fw-semibold p-0 w-100 d-flex justify-content-between align-items-center faq-question" type="button" onclick="toggleFAQ('faq1')" aria-controls="faq1">
+                        <span>What is CHARUSAT Student Hub?</span>
+                        <span class="badge bg-primary rounded-pill">&darr;</span>
+                    </button>
+                    <p id="faq1" class="faq-answer text-muted small mt-2 mb-0 pt-2 border-top">
+                        Student Hub is a simple and clean portal for accessing academic and student information in one place.
+                    </p>
+                </div>
+
+                <div class="list-group-item p-3 mb-2 border rounded">
+                    <button class="btn btn-link text-decoration-none text-start text-dark fw-semibold p-0 w-100 d-flex justify-content-between align-items-center faq-question" type="button" onclick="toggleFAQ('faq2')" aria-controls="faq2">
+                        <span>Which technologies are used in the portal?</span>
+                        <span class="badge bg-primary rounded-pill">&darr;</span>
+                    </button>
+                    <p id="faq2" class="faq-answer text-muted small mt-2 mb-0 pt-2 border-top">
+                        HTML5, CSS3, Bootstrap 5, JavaScript, JSON data structures, and PHP are used across the portal.
+                    </p>
+                </div>
+
+                <div class="list-group-item p-3 border rounded">
+                    <button class="btn btn-link text-decoration-none text-start text-dark fw-semibold p-0 w-100 d-flex justify-content-between align-items-center faq-question" type="button" onclick="toggleFAQ('faq3')" aria-controls="faq3">
+                        <span>Can the portal work on mobile and tablet devices?</span>
+                        <span class="badge bg-primary rounded-pill">&darr;</span>
+                    </button>
+                    <p id="faq3" class="faq-answer text-muted small mt-2 mb-0 pt-2 border-top">
+                        Yes. Bootstrap's responsive grid system and media queries adjust the layout smoothly across all screens.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-light text-center py-3 mt-auto border-top">
+    <div class="container">
+        <div class="mb-2">
+            <a href="about.html" class="text-decoration-none text-muted mx-2">About</a> |
+            <a href="contact.html" class="text-decoration-none text-muted mx-2">Contact</a> |
+            <a href="login.html" class="text-decoration-none text-muted mx-2">Logout</a>
+        </div>
+        <p class="text-muted small mb-0">&copy; 2026 CHARUSAT Student Hub - Charotar University of Science and Technology</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/about.js"></script>
 </body>
 </html>

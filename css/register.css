@@ -8,6 +8,10 @@ body {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
+.error {
+    min-height: 18px;
+}
+
 [data-bs-theme="dark"] body {
     background-color: #121212;
 }

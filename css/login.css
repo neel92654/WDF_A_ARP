@@ -1,58 +1,26 @@
+:root {
+    --bs-primary: #0d47a1;
+    --bs-primary-rgb: 13, 71, 161;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #f8f9fa;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-h1 {
-    text-align: center;
-    color: blue;
+[data-bs-theme="dark"] body {
+    background-color: #121212 !important;
 }
 
-.login-box {
-    border: 2px solid black;
-    width: 400px;
-    height: 300px;
-    margin: auto;
-    padding: 20px;
-    text-align: center;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 3px 3px 8px gray;
+[data-bs-theme="dark"] .bg-white {
+    background-color: #1e1e1e !important;
 }
 
-.logo {
-    display: block;
-    margin: auto;
+[data-bs-theme="dark"] .bg-light {
+    background-color: #181818 !important;
 }
 
-input[type="text"],
-input[type="password"] {
-    width: 180px;
-    padding: 5px;
-}
-
-input[type="submit"] {
-    padding: 8px 20px;
-    background-color: blue;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: darkblue;
-}
-
-.footer {
-    text-align: center;
-}
-
-.footer a {
-    text-decoration: none;
-    color: black;
-}
-
-.footer a:hover {
-    color: blue;
+[data-bs-theme="dark"] .card {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
 }

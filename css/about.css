@@ -1,42 +1,36 @@
+:root {
+    --bs-primary: #0d47a1;
+    --bs-primary-rgb: 13, 71, 161;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #f8f9fa;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-h1 {
-    text-align: center;
-    color: blue;
+.faq-answer {
+    display: none;
 }
 
-div a {
-    text-decoration: none;
-    color: black;
-    padding: 5px;
+[data-bs-theme="dark"] body {
+    background-color: #121212;
 }
 
-div a:hover {
-    color: blue;
+[data-bs-theme="dark"] .bg-light {
+    background-color: #1e1e1e !important;
 }
 
-.container {
-    border: 2px solid black;
-    width: 700px;
-    margin: auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 3px 3px 8px gray;
+[data-bs-theme="dark"] .card-header.bg-white {
+    background-color: #242424 !important;
+    border-bottom-color: #333333;
 }
 
-h2 {
-    text-align: center;
+[data-bs-theme="dark"] .list-group-item {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-color: #333333;
 }
 
-h3 {
-    color: blue;
-}
-
-.footer {
-    text-align: center;
-    padding: 10px;
+[data-bs-theme="dark"] .faq-question {
+    color: #f0f0f0 !important;
 }

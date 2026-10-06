@@ -1,0 +1,62 @@
+[
+  {
+    "question": "What is Student Hub?",
+    "answer": "A student portal for academic information."
+  },
+  {
+    "question": "How do I register?",
+    "answer": "Open the Register page and complete the form."
+  },
+  {
+    "question": "How do I change the theme?",
+    "answer": "Use the Light/Dark Theme button."
+  },
+  {
+    "question": "Where are events shown?",
+    "answer": "Open the Events page."
+  },
+  {
+    "question": "Can I search events?",
+    "answer": "Yes, use the search box on the Events page."
+  },
+  {
+    "question": "Can I filter events?",
+    "answer": "Yes, choose a category."
+  },
+  {
+    "question": "Can I sort events?",
+    "answer": "Yes, use the sort dropdown."
+  },
+  {
+    "question": "Does the theme stay saved?",
+    "answer": "Yes, localStorage stores the theme choice."
+  },
+  {
+    "question": "Is the layout responsive?",
+    "answer": "Yes, CSS media queries adjust the layout."
+  },
+  {
+    "question": "Which technology fetches JSON?",
+    "answer": "The JavaScript Fetch API."
+  },
+  {
+    "question": "Is registration validated?",
+    "answer": "Yes, JavaScript validates the inputs."
+  },
+  {
+    "question": "Are error messages shown?",
+    "answer": "Yes, near the related fields."
+  },
+  {
+    "question": "Can events be paginated?",
+    "answer": "Yes, the Events page shows a small pagination control."
+  },
+  {
+    "question": "What is the project name?",
+    "answer": "CHARUSAT Student Hub Portal."
+  },
+  {
+    "question": "Who is it for?",
+    "answer": "It is designed for students."
+  }
+]
