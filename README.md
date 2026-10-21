@@ -97,26 +97,24 @@ The portal is built using **HTML5, CSS3, Bootstrap 5, JavaScript, JSON, PHP, and
 
 ## Practical Submission Reports (Practicals 1 to 14)
 
-All 14 academic practical reports have been generated using ReportLab and compiled in strict accordance with the official ITUE203 syllabus and faculty submission standards:
+All 14 academic practical submission reports are available as individual PDF documents in the dedicated repository folder **`25DCE087_WDF_Practicals_PR1-PR14/`**:
 
-- **Fourteen Individual Reports**: Located in `reports/practicals/`:
-  - `Practical_01_25DCE087_Neel_Patel.pdf`
-  - `Practical_02_25DCE087_Neel_Patel.pdf`
-  - `Practical_03_25DCE087_Neel_Patel.pdf`
-  - `Practical_04_25DCE087_Neel_Patel.pdf`
-  - `Practical_05_25DCE087_Neel_Patel.pdf`
-  - `Practical_06_25DCE087_Neel_Patel.pdf`
-  - `Practical_07_25DCE087_Neel_Patel.pdf`
-  - `Practical_08_25DCE087_Neel_Patel.pdf`
-  - `Practical_09_25DCE087_Neel_Patel.pdf`
-  - `Practical_10_25DCE087_Neel_Patel.pdf`
-  - `Practical_11_25DCE087_Neel_Patel.pdf`
-  - `Practical_12_25DCE087_Neel_Patel.pdf`
-  - `Practical_13_25DCE087_Neel_Patel.pdf`
-  - `Practical_14_25DCE087_Neel_Patel.pdf`
-- **Final Merged Report**:
-  - `WDF_Practicals_01-14_25DCE087_Neel_Patel.pdf` (in root directory and `reports/`)
-- **Report Sources**: Editable generator scripts in `reports/source/` (`practical_data.py`, `generate_all_reports.py`).
+| Practical | Topic / Scope | Submission PDF Report |
+|---|---|---|
+| **Practical 1** | Requirement Analysis, Portal Architecture, Sitemap & Low-Fi Wireframes | [`25DCE087_WDF_PR1.pdf`](25DCE087_WDF_Practicals_PR1-PR14/25DCE087_WDF_PR1.pdf) |
+| **Practical 2** | Semantic HTML5 Page Structure, Accessibility & Keyboard Navigability | [`25DCE087_WDF_PR2.pdf`](25DCE087_WDF_Practicals_PR1-PR14/25DCE087_WDF_PR2.pdf) |
+| **Practical 3** | Responsive UI Layouts with Bootstrap 5 & Multi-Viewport Breakpoints | [`25DCE087_WDF_PR3.pdf`](25DCE087_WDF_Practicals_PR1-PR14/25DCE087_WDF_PR3.pdf) |
+| **Practical 4** | JavaScript DOM Manipulation: FAQ Accordion, Highlights Slider, Modal & Theme Switcher | [`25DCE087_WDF_PR4.pdf`](25DCE087_WDF_Practicals_PR1-PR14/25DCE087_WDF_PR4.pdf) |
+| **Practical 5** | Student Registration Form with Regex Validation & Password Strength Meter | [`25DCE087_WDF_PR5.pdf`](25DCE087_WDF_Practicals_PR1-PR14/25DCE087_WDF_PR5.pdf) |
+| **Practical 6** | Fetch API Dynamic Consumption of External JSON with Search, Filter & Pagination | [`25DCE087_WDF_PR6.pdf`](25DCE087_WDF_Practicals_PR1-PR14/25DCE087_WDF_PR6.pdf) |
+| **Practical 7** | PHP Server-Side Form Handling, Input Sanitization & CSV File Storage | [`25DCE087_WDF_PR7.pdf`](25DCE087_WDF_Practicals_PR1-PR14/25DCE087_WDF_PR7.pdf) |
+| **Practical 8** | Relational Database Schema Design, ER Modeling, PDO & Prepared Statements | [`25DCE087_WDF_PR8.pdf`](25DCE087_WDF_Practicals_PR1-PR14/25DCE087_WDF_PR8.pdf) |
+| **Practical 9** | Secure Registration Backend with Duplicate Check, Hash & Atomic MySQL Insert | [`25DCE087_WDF_PR9.pdf`](25DCE087_WDF_Practicals_PR1-PR14/25DCE087_WDF_PR9.pdf) |
+| **Practical 10** | Secure Authentication, Session Hijack Prevention, RBAC & Inactivity Timeout | [`25DCE087_WDF_PR10.pdf`](25DCE087_WDF_Practicals_PR1-PR14/25DCE087_WDF_PR10.pdf) |
+| **Practical 11** | Student Records Management CRUD with Search, Course Filter & CSV Export | [`25DCE087_WDF_PR11.pdf`](25DCE087_WDF_Practicals_PR1-PR14/25DCE087_WDF_PR11.pdf) |
+| **Practical 12** | Event Management CRUD with Secure Poster File Upload & Binary MIME Validation | [`25DCE087_WDF_PR12.pdf`](25DCE087_WDF_Practicals_PR1-PR14/25DCE087_WDF_PR12.pdf) |
+| **Practical 13** | PHP RESTful JSON API & Asynchronous Fetch CRUD Without Page Reload | [`25DCE087_WDF_PR13.pdf`](25DCE087_WDF_Practicals_PR1-PR14/25DCE087_WDF_PR13.pdf) |
+| **Practical 14** | Admin Dashboard, RBAC Route Authorization, Live Metrics & Audit Trail Logging | [`25DCE087_WDF_PR14.pdf`](25DCE087_WDF_Practicals_PR1-PR14/25DCE087_WDF_PR14.pdf) |
 
 ---
 
@@ -125,11 +123,27 @@ All 14 academic practical reports have been generated using ReportLab and compil
 ```
 StudentHub/
 │
-├── api/                        # REST JSON API Endpoints (Practical 13)
-│   ├── events.php              # Event API (GET search/filter, POST create/update/delete)
-│   └── students.php            # Students list JSON API
+├── 25DCE087_WDF_Practicals_PR1-PR14/   # Official Practical Submission PDF Reports (PR1 to PR14)
+│   ├── 25DCE087_WDF_PR1.pdf            # Practical 1 Report
+│   ├── 25DCE087_WDF_PR2.pdf            # Practical 2 Report
+│   ├── 25DCE087_WDF_PR3.pdf            # Practical 3 Report
+│   ├── 25DCE087_WDF_PR4.pdf            # Practical 4 Report
+│   ├── 25DCE087_WDF_PR5.pdf            # Practical 5 Report
+│   ├── 25DCE087_WDF_PR6.pdf            # Practical 6 Report
+│   ├── 25DCE087_WDF_PR7.pdf            # Practical 7 Report
+│   ├── 25DCE087_WDF_PR8.pdf            # Practical 8 Report
+│   ├── 25DCE087_WDF_PR9.pdf            # Practical 9 Report
+│   ├── 25DCE087_WDF_PR10.pdf           # Practical 10 Report
+│   ├── 25DCE087_WDF_PR11.pdf           # Practical 11 Report
+│   ├── 25DCE087_WDF_PR12.pdf           # Practical 12 Report
+│   ├── 25DCE087_WDF_PR13.pdf           # Practical 13 Report
+│   └── 25DCE087_WDF_PR14.pdf           # Practical 14 Report
 │
-├── css/                        # Page-Specific Stylesheets (Bootstrap 5 Overrides)
+├── api/                                # REST JSON API Endpoints (Practical 13)
+│   ├── events.php                      # Event API (GET search/filter, POST create/update/delete)
+│   └── students.php                    # Students list JSON API
+│
+├── css/                                # Page-Specific Stylesheets (Bootstrap 5 Overrides)
 │   ├── about.css
 │   ├── announcements.css
 │   ├── assignments.css
@@ -144,69 +158,82 @@ StudentHub/
 │   ├── settings.css
 │   └── timetable.css
 │
-├── data/                       # External JSON Datasets (Practical 6)
-│   ├── events.json             # 15 event records
-│   ├── students.json           # 15 student records
-│   └── faqs.json               # 15 FAQ records
+├── data/                               # External JSON Datasets (Practical 6)
+│   ├── events.json                     # 15 event records
+│   ├── students.json                   # 15 student records
+│   └── faqs.json                       # 15 FAQ records
 │
-├── docs/                       # Project Planning & Viva Documentation
-│   ├── requirement-analysis.md # Comprehensive functional & non-functional requirements
-│   ├── sitemap.md              # Complete portal sitemap
-│   ├── wireframes.md           # Low-fidelity wireframes
-│   ├── er-model.md             # Database ER diagram and entity specifications
-│   └── viva-notes.md           # Viva revision guide for Practicals 1 to 13
+├── docs/                               # Project Planning & System Specifications
+│   ├── requirement-analysis.md         # Comprehensive functional & non-functional requirements
+│   ├── sitemap.md                      # Complete portal sitemap
+│   ├── wireframes.md                   # Low-fidelity wireframes
+│   ├── er-model.md                     # Database ER diagram and entity specifications
+│   ├── P1Wireframes.svg                # Practical 1 Wireframe graphic
+│   └── SiteMap.png                     # Practical 1 Sitemap diagram
 │
-├── images/                     # Portal Logos & Graphics
-│   ├── image.png               # CHARUSAT Portal Brand Logo
-│   └── profile.png             # Student profile avatar
+├── images/                             # Portal Logos & Graphics
+│   ├── image.png                       # CHARUSAT Portal Brand Logo
+│   └── profile.png                     # Student profile avatar
 │
-├── js/                         # Client-Side JavaScript
-│   ├── common.js               # Theme switching (localStorage) & navigation
-│   ├── dashboard.js            # Content slider, modal, notification dismissal
-│   ├── about.js                # Collapsible FAQ accordion
-│   ├── register.js             # Client-side form validation & password strength
-│   ├── login.js                # Login validation & URL alert display
-│   └── events.js               # Practical 6 Fetch API, search, filter, pagination
+├── js/                                 # Client-Side JavaScript
+│   ├── common.js                       # Theme switching (localStorage) & navigation
+│   ├── dashboard.js                    # Content slider, modal, notification dismissal
+│   ├── about.js                        # Collapsible FAQ accordion
+│   ├── register.js                     # Client-side form validation & password strength
+│   ├── login.js                        # Login validation & URL alert display
+│   └── events.js                       # Practical 6 Fetch API, search, filter, pagination
 │
-├── pages/                      # HTML & PHP Views
-│   ├── login.html              # Portal entry / login screen
-│   ├── register.html           # Student registration form
-│   ├── dashboard.php           # Authenticated Student Dashboard (Protected)
-│   ├── dashboard.html          # Static Student Dashboard
-│   ├── admin_dashboard.php     # Authenticated Administrator Control Panel (Protected)
-│   ├── manage_students.php     # Student Management CRUD & Search (Practical 11)
-│   ├── manage_events.php       # Event Management CRUD & Poster Upload (Practical 12)
-│   ├── events_api.php          # Real-time Fetch API CRUD without page reload (Practical 13)
-│   ├── attendance.html         # Lecture attendance metrics & 2x2 summary cards
-│   ├── assignments.html        # Course assignment submissions & deadlines
-│   ├── courses.html            # Enrolled courses, credits, faculty mentors
-│   ├── timetable.html          # Weekly class schedule with lunch break
-│   ├── announcements.html      # Campus notices & examination circulars
-│   ├── events.html             # Public events catalog (Practical 6 Fetch API)
-│   ├── profile.html            # Student profile details
-│   ├── settings.html           # Account security & portal preferences
-│   ├── contact.html            # Helpdesk contact form (Practical 7)
-│   └── about.html              # Portal overview & FAQ
+├── pages/                              # HTML & PHP Views
+│   ├── login.html                      # Portal entry / login screen
+│   ├── register.html                   # Student registration form
+│   ├── dashboard.php                   # Authenticated Student Dashboard (Protected)
+│   ├── dashboard.html                  # Static Student Dashboard
+│   ├── admin_dashboard.php             # Authenticated Administrator Control Panel (Protected)
+│   ├── manage_students.php             # Student Management CRUD & Search (Practical 11)
+│   ├── manage_events.php               # Event Management CRUD & Poster Upload (Practical 12)
+│   ├── events_api.php                  # Real-time Fetch API CRUD without page reload (Practical 13)
+│   ├── attendance.html                 # Lecture attendance metrics & 2x2 summary cards
+│   ├── assignments.html                # Course assignment submissions & deadlines
+│   ├── courses.html                    # Enrolled courses, credits, faculty mentors
+│   ├── timetable.html                  # Weekly class schedule with lunch break
+│   ├── announcements.html              # Campus notices & examination circulars
+│   ├── events.html                     # Public events catalog (Practical 6 Fetch API)
+│   ├── profile.html                    # Student profile details
+│   ├── settings.html                   # Account security & portal preferences
+│   ├── contact.html                    # Helpdesk contact form (Practical 7)
+│   └── about.html                      # Portal overview & FAQ
 │
-├── php/                        # Backend Processing & Database Connections
-│   ├── db.php                  # MySQLi database connection helper
-│   ├── db_pdo.php              # PDO database connection helper (Practical 8)
-│   ├── test_pdo.php            # Standalone PDO connection & prepared statement test
-│   ├── auth.php                # Session security, timeout & RBAC helper
-│   ├── login_process.php       # Login verification & role redirection
-│   ├── logout.php              # Session destruction & logout handler
-│   ├── register.php            # Registration handler (MySQL insert + CSV logging)
-│   └── contact.php             # Contact form handler (CSV persistence)
+├── php/                                # Backend Processing & Database Connections
+│   ├── db.php                          # MySQLi database connection helper
+│   ├── db_pdo.php                      # PDO database connection helper (Practical 8)
+│   ├── test_pdo.php                    # Standalone PDO connection & prepared statement test
+│   ├── auth.php                        # Session security, timeout & RBAC helper
+│   ├── login_process.php               # Login verification & role redirection
+│   ├── logout.php                      # Session destruction & logout handler
+│   ├── register.php                    # Registration handler (MySQL insert + CSV logging)
+│   └── contact.php                     # Contact form handler (CSV persistence)
 │
-├── sql/                        # Database Schema & Seed Data
-│   └── schema.sql              # MySQL DDL schema and seed data
+├── practical_02_html/                  # Semantic HTML-Only Page Skeletons (Practical 2)
+│   ├── index.html
+│   ├── about.html
+│   ├── contact.html
+│   ├── courses.html
+│   ├── attendance.html
+│   ├── timetable.html
+│   ├── events.html
+│   ├── profile.html
+│   ├── login.html
+│   └── register.html
 │
-├── storage/                    # File Storage Directory (Practical 7)
-│   ├── contacts.csv            # Contact inquiries CSV
-│   └── registrations.csv       # Registration records CSV
+├── sql/                                # Database Schema & Seed Data
+│   └── schema.sql                      # MySQL DDL schema and seed data
 │
-└── uploads/                    # File Upload Directory (Practical 12)
-    └── posters/                # Validated uploaded event poster graphics
+├── storage/                            # File Storage Directory (Practical 7)
+│   ├── contacts.csv                    # Contact inquiries CSV
+│   └── registrations.csv               # Registration records CSV
+│
+└── uploads/                            # File Upload Directory (Practical 12)
+    └── posters/                        # Validated uploaded event poster graphics
 ```
 
 ---
