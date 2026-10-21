@@ -1,0 +1,254 @@
+<?php
+require_once __DIR__ . '/../php/auth.php';
+require_once __DIR__ . '/../php/db.php';
+
+$session = check_auth();
+
+$userId = (int)$session['user_id'];
+$conn = get_db_connection();
+
+$stmt = mysqli_prepare($conn, "SELECT enrollment_no, full_name, course, year FROM students WHERE user_id = ? LIMIT 1");
+mysqli_stmt_bind_param($stmt, "i", $userId);
+mysqli_stmt_execute($stmt);
+$res = mysqli_stmt_get_result($stmt);
+$student = mysqli_fetch_assoc($res);
+mysqli_stmt_close($stmt);
+
+$studentName = $student['full_name'] ?? ($session['username'] ?? 'Demo Student');
+$enrollmentNo = $student['enrollment_no'] ?? 'STU2026001';
+$program = $student['course'] ?? 'B.Tech Computer Engineering';
+$year = $student['year'] ?? 'Second Year';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - CHARUSAT Student Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="dashboard.php">
+            <img src="../images/image.png" alt="CHARUSAT Logo" height="36" class="d-inline-block align-text-top me-2 bg-white rounded p-1">
+            <span class="fw-bold">CHARUSAT STUDENT HUB</span>
+        </a>
+        <div class="d-flex align-items-center order-lg-last ms-auto">
+            <button class="btn btn-outline-light btn-sm me-2" id="themeToggle" onclick="toggleTheme()" aria-label="Toggle theme" title="Toggle Light/Dark Theme">
+                <span id="themeIcon">☾</span> <span id="themeText" class="d-none d-sm-inline">Dark</span>
+            </button>
+            <a href="../php/logout.php" class="btn btn-light btn-sm me-2 me-lg-0 text-primary fw-semibold">Logout</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" href="dashboard.php">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="attendance.html">Attendance</a></li>
+                <li class="nav-item"><a class="nav-link" href="assignments.html">Assignments</a></li>
+                <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                <li class="nav-item"><a class="nav-link" href="timetable.html">Timetable</a></li>
+                <li class="nav-item"><a class="nav-link" href="announcements.html">Announcements</a></li>
+                <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="settings.html">Settings</a></li>
+                <?php if ($session['role'] === 'admin'): ?>
+                <li class="nav-item"><a class="nav-link text-warning fw-bold" href="admin_dashboard.php">Admin Panel</a></li>
+                <?php endif; ?>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container my-4 flex-grow-1">
+    <div id="notification" class="alert alert-warning alert-dismissible fade show d-flex align-items-center justify-content-between shadow-sm" role="status">
+        <div>
+            <strong>Notice:</strong> Mid Semester Examination will begin from <strong>7 September 2026</strong>.
+        </div>
+        <button type="button" class="btn-close" onclick="closeNotification()" aria-label="Close"></button>
+    </div>
+
+    <div class="card shadow-sm mb-4 border-0 bg-primary text-white">
+        <div class="card-body p-4 d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+            <div>
+                <h2 class="h4 mb-1">Welcome back, <?php echo htmlspecialchars($studentName); ?></h2>
+                <p class="mb-0 text-white-50">
+                    <span><strong>Enrollment:</strong> <?php echo htmlspecialchars($enrollmentNo); ?></span> | 
+                    <span><strong>Program:</strong> <?php echo htmlspecialchars($program); ?></span> | 
+                    <span><strong>Year:</strong> <?php echo htmlspecialchars($year); ?></span>
+                </p>
+            </div>
+            <div>
+                <button type="button" class="btn btn-light btn-sm fw-semibold" onclick="openModal()">View Quick Information</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-white d-flex justify-content-between align-items-center py-3">
+            <h5 class="mb-0 text-primary fw-bold">Student Hub Highlights</h5>
+            <div>
+                <button type="button" class="btn btn-outline-primary btn-sm" onclick="previousSlide()">Previous</button>
+                <button type="button" class="btn btn-outline-primary btn-sm" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+        <div class="card-body slider" aria-label="Student Hub highlights">
+            <div class="slide active">
+                <span class="badge bg-primary mb-2">Attendance</span>
+                <h5 class="card-title">Attendance Overview</h5>
+                <p class="card-text text-muted">Your current overall attendance is <strong>92%</strong> across all enrolled courses.</p>
+            </div>
+            <div class="slide">
+                <span class="badge bg-primary mb-2">Assignments</span>
+                <h5 class="card-title">Pending Coursework</h5>
+                <p class="card-text text-muted">You have <strong>3 pending assignments</strong>. Next submission is due on 20 July for WDF.</p>
+            </div>
+            <div class="slide">
+                <span class="badge bg-primary mb-2">Events</span>
+                <h5 class="card-title">Campus Hackathon</h5>
+                <p class="card-text text-muted">Hackathon registration is now open in Events. Submit team details before 22 August.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="infoModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content shadow">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title h6" id="modalTitle">Student Hub Information</h5>
+                    <button type="button" class="btn-close btn-close-white" onclick="closeModal()" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Use the navigation menu to access attendance, assignments, courses, timetable, announcements and events.</p>
+                    <ul class="list-group list-group-flush small">
+                        <li class="list-group-item"><strong>Attendance:</strong> View subject-wise lecture attendance percentages.</li>
+                        <li class="list-group-item"><strong>Assignments:</strong> Check active deadlines and submit coursework.</li>
+                        <li class="list-group-item"><strong>Courses:</strong> Review enrolled modules and credits.</li>
+                        <li class="list-group-item"><strong>Timetable:</strong> Access weekly lecture schedules.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer bg-light">
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="closeModal()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-3 mb-4">
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow-sm border-start border-primary border-4">
+                <div class="card-body">
+                    <div class="text-muted small text-uppercase fw-bold mb-1">Attendance</div>
+                    <div class="h3 fw-bold text-primary mb-1">92%</div>
+                    <span class="badge bg-primary">Good Standing</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow-sm border-start border-primary border-4">
+                <div class="card-body">
+                    <div class="text-muted small text-uppercase fw-bold mb-1">Assignments</div>
+                    <div class="h3 fw-bold text-primary mb-1">3 Pending</div>
+                    <span class="badge bg-primary">Action Required</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow-sm border-start border-primary border-4">
+                <div class="card-body">
+                    <div class="text-muted small text-uppercase fw-bold mb-1">Courses</div>
+                    <div class="h3 fw-bold text-primary mb-1">4 Enrolled</div>
+                    <span class="badge bg-primary">15 Credits</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow-sm border-start border-primary border-4">
+                <div class="card-body">
+                    <div class="text-muted small text-uppercase fw-bold mb-1">Upcoming Event</div>
+                    <div class="h5 fw-bold text-primary mb-1">Hackathon</div>
+                    <span class="badge bg-primary">7 August</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-12 col-lg-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header bg-white py-3">
+                    <h5 class="mb-0 fw-bold text-primary">Academic Modules Overview</h5>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Module</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Attendance</strong></td>
+                                    <td><span class="badge bg-primary">92%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Assignments</strong></td>
+                                    <td><span class="badge bg-primary">3 Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Courses</strong></td>
+                                    <td><span class="badge bg-primary">4 Registered</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Upcoming Event</strong></td>
+                                    <td>Hackathon - 7 August</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0 fw-bold text-primary">Latest Announcement</h5>
+                    <span class="badge bg-danger">Important</span>
+                </div>
+                <div class="card-body">
+                    <h6 class="card-title fw-bold">Mid Semester Examination Schedule</h6>
+                    <p class="card-text text-muted">
+                        Mid Semester Examination will begin from
+                        <strong>7 September 2026.</strong>
+                        Students must verify their examination seating numbers and timetables from the department notice board.
+                    </p>
+                    <a href="announcements.html" class="btn btn-outline-primary btn-sm">View all announcements &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-light text-center py-3 mt-auto border-top">
+    <div class="container">
+        <div class="mb-2">
+            <a href="about.html" class="text-decoration-none text-muted mx-2">About</a> |
+            <a href="contact.html" class="text-decoration-none text-muted mx-2">Contact</a> |
+            <a href="../php/logout.php" class="text-decoration-none text-muted mx-2">Logout</a>
+        </div>
+        <p class="text-muted small mb-0">&copy; 2026 CHARUSAT Student Hub - Charotar University of Science and Technology</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/dashboard.js"></script>
+</body>
+</html>

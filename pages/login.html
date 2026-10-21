@@ -32,12 +32,12 @@
                         <img src="../images/image.png" alt="CHARUSAT Logo" height="42" class="mb-3">
                         <h2 class="h4 fw-bold text-primary mb-1">Student Portal Login</h2>
                         <p class="text-muted small">Access your academic records and dashboard</p>
-                    </div>
+                    <div id="loginAlert"></div>
 
-                    <form action="dashboard.html" method="post">
+                    <form action="../php/login_process.php" method="post">
                         <div class="mb-3">
                             <label for="username" class="form-label fw-semibold">Username / Enrollment No.</label>
-                            <input type="text" id="username" name="username" class="form-control" placeholder="e.g. 25DCE087" autocomplete="username">
+                            <input type="text" id="username" name="username" class="form-control" placeholder="e.g. STU2026001" autocomplete="username">
                         </div>
 
                         <div class="mb-3">
@@ -46,6 +46,11 @@
                                 <a href="#" class="text-decoration-none small">Forgot password?</a>
                             </div>
                             <input type="password" id="password" name="password" class="form-control mt-1" placeholder="Enter your password" autocomplete="current-password">
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="remember" name="remember" value="1">
+                            <label class="form-check-label small" for="remember">Remember me on this device</label>
                         </div>
 
                         <div class="d-grid mt-4">
