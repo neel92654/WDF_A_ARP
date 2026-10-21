@@ -1,0 +1,14 @@
+Student Hub Portal
+  |-- Login
+  |-- Dashboard
+  |-- Attendance
+  |-- Assignments
+  |-- Courses
+  |-- Timetable
+  |-- Announcements
+  |-- Events
+  |-- Profile
+  |-- Settings
+  |-- Registration
+  |-- Contact
+  `-- About

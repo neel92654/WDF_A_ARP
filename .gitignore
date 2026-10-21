@@ -1,0 +1,17 @@
+# Operating System
+.DS_Store
+Thumbs.db
+
+# Generated PDF reports and external references
+*.pdf
+reports/
+reference/
+scripts/
+
+# Environment and sensitive configuration
+.env
+*.log
+
+# Python cache
+__pycache__/
+*.pyc
