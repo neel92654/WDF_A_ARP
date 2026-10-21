@@ -38,3 +38,31 @@ form.addEventListener("submit", function (event) {
         event.preventDefault();
     }
 });
+
+window.addEventListener("DOMContentLoaded", function () {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get("test") === "invalid") {
+        document.getElementById("name").value = "N";
+        document.getElementById("email").value = "student-invalid-email";
+        document.getElementById("mobile").value = "12345";
+        password.value = "abc";
+        password.dispatchEvent(new Event("input"));
+        document.getElementById("confirmPassword").value = "xyz";
+        document.getElementById("course").value = "";
+        document.getElementById("year").value = "";
+        document.getElementById("terms").checked = false;
+        form.dispatchEvent(new Event("submit", { cancelable: true }));
+    } else if (params.get("test") === "valid") {
+        document.getElementById("name").value = "Neel Patel";
+        document.getElementById("email").value = "25dce087@charusat.edu.in";
+        document.getElementById("mobile").value = "9876543210";
+        var male = document.getElementById("genderMale");
+        if (male) male.checked = true;
+        document.getElementById("course").value = "B.Tech CE";
+        document.getElementById("year").value = "3";
+        password.value = "Secur3Pass!";
+        password.dispatchEvent(new Event("input"));
+        document.getElementById("confirmPassword").value = "Secur3Pass!";
+        document.getElementById("terms").checked = true;
+    }
+});
