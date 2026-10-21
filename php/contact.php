@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         if ($handle) {
             if ($isNewFile) {
-                fputcsv($handle, ["Name", "Email", "Subject", "Message", "Submitted At"]);
+                fputcsv($handle, ["Name", "Email", "Subject", "Message", "Submitted At"], ',', '"', '\\');
             }
             fputcsv($handle, [
                 htmlspecialchars($name, ENT_QUOTES, "UTF-8"),
@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 htmlspecialchars($subject, ENT_QUOTES, "UTF-8"),
                 htmlspecialchars($contactMessage, ENT_QUOTES, "UTF-8"),
                 date("Y-m-d H:i:s")
-            ]);
+            ], ',', '"', '\\');
             fclose($handle);
             $message = "Your message was submitted successfully.";
         } else {

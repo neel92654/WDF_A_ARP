@@ -1,2 +1,4 @@
 Name,Email,Mobile,Course,Year,Gender,Registered At
 "Test Student",test@example.com,9876543210,BCA,"Second Year",Other,"2026-10-06 08:59:09"
+STU2026022,"Student Candidate",candidate99@charusat.edu.in,9876543299,"B.Tech Computer Engineering","Second Year",Male,"2026-10-21 09:32:44"
+STU2026023,"Test Student",student01@charusat.edu.in,9876543210,"B.Tech CE",3,Male,"2026-10-21 15:38:43"
