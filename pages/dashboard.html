@@ -13,7 +13,7 @@
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="dashboard.html">
             <img src="../images/image.png" alt="CHARUSAT Logo" height="36" class="d-inline-block align-text-top me-2 bg-white rounded p-1">
-            <span class="fw-bold">CHARUSAT STUDENT HUB</span>
+            <span class="fw-bold"><span class="d-none d-sm-inline">CHARUSAT </span>STUDENT HUB</span>
         </a>
         <div class="d-flex align-items-center order-lg-last ms-auto">
             <button class="btn btn-outline-light btn-sm me-2 me-lg-0" id="themeToggle" onclick="toggleTheme()" aria-label="Toggle theme" title="Toggle Light/Dark Theme">
@@ -42,34 +42,36 @@
 
 <main class="container my-4 flex-grow-1">
     <div id="notification" class="alert alert-warning alert-dismissible fade show d-flex align-items-center justify-content-between shadow-sm" role="status">
-        <div>
-            <strong>Notice:</strong> Mid Semester Examination will begin from <strong>7 September 2026</strong>.
+        <div class="pe-3">
+            <strong>Notice:</strong> Mid Semester Exams begin from <strong>7 Sep 2026</strong>.
         </div>
         <button type="button" class="btn-close" onclick="closeNotification()" aria-label="Close"></button>
     </div>
 
     <div class="card shadow-sm mb-4 border-0 bg-primary text-white">
-        <div class="card-body p-4 d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+        <div class="card-body p-3 p-md-4 d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3">
             <div>
-                <h2 class="h4 mb-1">Welcome back, Neel Patel</h2>
-                <p class="mb-0 text-white-50">
-                    <span><strong>Enrollment:</strong> 25DCE087</span> | 
-                    <span><strong>Program:</strong> B.Tech Computer Engineering</span> | 
+                <h2 class="h5 mb-1">Welcome back, Demo Student</h2>
+                <div class="d-flex flex-wrap gap-2 text-white-50 small">
+                    <span><strong>Enrollment:</strong> STU2026001</span>
+                    <span class="d-none d-sm-inline">|</span>
+                    <span><strong>Program:</strong> B.Tech CE</span>
+                    <span class="d-none d-sm-inline">|</span>
                     <span><strong>Semester:</strong> 3</span>
-                </p>
+                </div>
             </div>
             <div>
-                <button type="button" class="btn btn-light btn-sm fw-semibold" onclick="openModal()">View Quick Information</button>
+                <button type="button" class="btn btn-light btn-sm fw-semibold" onclick="openModal()">Quick Info</button>
             </div>
         </div>
     </div>
 
     <div class="card shadow-sm mb-4">
-        <div class="card-header bg-white d-flex justify-content-between align-items-center py-3">
-            <h5 class="mb-0 text-primary fw-bold">Student Hub Highlights</h5>
+        <div class="card-header bg-white d-flex flex-wrap justify-content-between align-items-center py-2 gap-2">
+            <h6 class="mb-0 text-primary fw-bold">Student Hub Highlights</h6>
             <div>
-                <button type="button" class="btn btn-outline-primary btn-sm" onclick="previousSlide()">Previous</button>
-                <button type="button" class="btn btn-outline-primary btn-sm" onclick="nextSlide()">Next</button>
+                <button type="button" class="btn btn-outline-primary btn-sm py-0 px-2" onclick="previousSlide()">Prev</button>
+                <button type="button" class="btn btn-outline-primary btn-sm py-0 px-2" onclick="nextSlide()">Next</button>
             </div>
         </div>
         <div class="card-body slider" aria-label="Student Hub highlights">
@@ -217,7 +219,7 @@
         <div class="mb-2">
             <a href="about.html" class="text-decoration-none text-muted mx-2">About</a> |
             <a href="contact.html" class="text-decoration-none text-muted mx-2">Contact</a> |
-            <a href="login.html" class="text-decoration-none text-muted mx-2">Logout</a>
+            <a href="../php/logout.php" class="text-decoration-none text-muted mx-2">Logout</a>
         </div>
         <p class="text-muted small mb-0">&copy; 2026 CHARUSAT Student Hub - Charotar University of Science and Technology</p>
     </div>
