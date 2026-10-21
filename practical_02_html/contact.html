@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Hub Portal - Contact &amp; Support</title>
+</head>
+<body>
+    <header>
+        <img src="../images/image.png" alt="CHARUSAT Official Logo" width="180">
+        <h1>CHARUSAT Student Hub Portal</h1>
+        <p>Charotar University of Science and Technology - Department of Computer Engineering</p>
+    </header>
+
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="attendance.html">Attendance</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="timetable.html">Timetable</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Contact Department Support</h2>
+            <p>For technical inquiries, academic registration anomalies, or portal support, reach out using the form below.</p>
+
+            <form action="contact.html" method="post">
+                <fieldset>
+                    <legend>Inquiry Form</legend>
+
+                    <p>
+                        <label for="contact-name">Your Full Name:</label><br>
+                        <input type="text" id="contact-name" name="name" required>
+                    </p>
+
+                    <p>
+                        <label for="contact-email">Email Address:</label><br>
+                        <input type="email" id="contact-email" name="email" required>
+                    </p>
+
+                    <p>
+                        <label for="contact-subject">Subject Category:</label><br>
+                        <select id="contact-subject" name="category" required>
+                            <option value="">-- Choose Category --</option>
+                            <option value="attendance">Attendance Discrepancy</option>
+                            <option value="course">Course Registration Issue</option>
+                            <option value="technical">Portal Technical Error</option>
+                            <option value="other">General Inquiry</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="contact-message">Detailed Message:</label><br>
+                        <textarea id="contact-message" name="message" rows="6" cols="50" required></textarea>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <button type="submit">Send Message</button>
+                    <button type="reset">Clear</button>
+                </p>
+            </form>
+        </section>
+
+        <section>
+            <h2>Campus Location &amp; Office Hours</h2>
+            <address>
+                Department of Computer Engineering<br>
+                Chandubhai S. Patel Institute of Technology (CSPIT)<br>
+                CHARUSAT Campus, Changa - 388421, Gujarat, India<br>
+                Email: info@charusat.ac.in | Phone: +91 2697 265011
+            </address>
+        </section>
+
+        <aside>
+            <h2>Operating Hours</h2>
+            <p>Monday to Friday: 09:00 AM – 04:30 PM (Except university holidays).</p>
+        </aside>
+    </main>
+
+    <footer>
+        <nav aria-label="Footer Navigation">
+            <a href="index.html">Home</a> |
+            <a href="about.html">About</a> |
+            <a href="login.html">Login</a>
+        </nav>
+        <p>&copy; 2026 CHARUSAT Student Hub - Charotar University of Science and Technology</p>
+    </footer>
+</body>
+</html>

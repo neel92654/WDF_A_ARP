@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Hub Portal - User Login</title>
+</head>
+<body>
+    <header>
+        <img src="../images/image.png" alt="CHARUSAT Official Logo" width="180">
+        <h1>CHARUSAT Student Hub Portal</h1>
+        <p>Charotar University of Science and Technology - Department of Computer Engineering</p>
+    </header>
+
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="attendance.html">Attendance</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="timetable.html">Timetable</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>User Authentication</h2>
+            <p>Access your academic portal, course registrations, and event dashboard.</p>
+
+            <form action="profile.html" method="post">
+                <fieldset>
+                    <legend>Credentials</legend>
+
+                    <p>
+                        <label for="login-username">Enrollment Number or Username:</label><br>
+                        <input type="text" id="login-username" name="username" required autocomplete="username">
+                    </p>
+
+                    <p>
+                        <label for="login-password">Password:</label><br>
+                        <input type="password" id="login-password" name="password" required autocomplete="current-password">
+                    </p>
+
+                    <p>
+                        <label for="login-role">Select Role:</label><br>
+                        <select id="login-role" name="role" required>
+                            <option value="student">Student</option>
+                            <option value="faculty">Faculty Member</option>
+                            <option value="admin">Administrator</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="remember-me" name="remember_me">
+                        <label for="remember-me">Keep me logged in on this computer (Remember Me)</label>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <button type="submit">Sign In</button>
+                    <a href="register.html">Need an account? Register here</a>
+                </p>
+            </form>
+        </section>
+
+        <aside>
+            <h2>Security Advisory</h2>
+            <p>Never share your credentials with anyone. Log out after each session if accessing through a shared university laboratory terminal.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <nav aria-label="Footer Navigation">
+            <a href="index.html">Home</a> |
+            <a href="contact.html">Help &amp; Support</a>
+        </nav>
+        <p>&copy; 2026 CHARUSAT Student Hub - Charotar University of Science and Technology</p>
+    </footer>
+</body>
+</html>

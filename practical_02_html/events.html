@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Hub Portal - Campus Events</title>
+</head>
+<body>
+    <header>
+        <img src="../images/image.png" alt="CHARUSAT Official Logo" width="180">
+        <h1>CHARUSAT Student Hub Portal</h1>
+        <p>Charotar University of Science and Technology - Department of Computer Engineering</p>
+    </header>
+
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="attendance.html">Attendance</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="timetable.html">Timetable</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Upcoming Campus Events</h2>
+            <p>Participate in technical symposiums, coding hackathons, and cultural fests conducted at CSPIT and CHARUSAT.</p>
+        </section>
+
+        <section>
+            <h2>Featured Events List</h2>
+
+            <article>
+                <header>
+                    <h3>Cognizance 2026 - Annual Technical Symposium</h3>
+                    <p><time datetime="2026-11-15">November 15, 2026</time> | Venue: CSPIT Auditorium</p>
+                </header>
+                <p>A national-level technical festival featuring coding competitions, robotics challenges, circuit design, and project exhibitions.</p>
+                <footer>
+                    <p>Category: Technical | Seats: 250 | Fee: Free for CHARUSAT Students</p>
+                    <a href="#register-cognizance">Register for Event</a>
+                </footer>
+            </article>
+
+            <article>
+                <header>
+                    <h3>HackCHARUSAT - 24-Hour Hackathon</h3>
+                    <p><time datetime="2026-12-05">December 05, 2026</time> | Venue: Computer Center Labs</p>
+                </header>
+                <p>Collaborative coding marathon addressing real-world problem statements across smart healthcare, agriculture, and web technologies.</p>
+                <footer>
+                    <p>Category: Hackathon | Team Size: 2-4 Members | Prizes: Cash Awards</p>
+                    <a href="#register-hack">Register Team</a>
+                </footer>
+            </article>
+
+            <article>
+                <header>
+                    <h3>Web Development Boot Camp</h3>
+                    <p><time datetime="2026-10-28">October 28, 2026</time> | Venue: Lab 304, CE Dept</p>
+                </header>
+                <p>Hands-on workshop exploring full-stack web architectures, REST APIs, and modern responsive front-end frameworks.</p>
+                <footer>
+                    <p>Category: Workshop | Capacity: 60 Students</p>
+                    <a href="#register-workshop">Register Workshop</a>
+                </footer>
+            </article>
+        </section>
+
+        <section id="event-registration-section">
+            <h2>Quick Event Registration</h2>
+            <form action="events.html" method="post">
+                <p>
+                    <label for="event-select">Select Event:</label><br>
+                    <select id="event-select" name="event_id" required>
+                        <option value="">-- Choose an Event --</option>
+                        <option value="1">Cognizance 2026</option>
+                        <option value="2">HackCHARUSAT</option>
+                        <option value="3">Web Development Boot Camp</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="student-enrollment">Your Enrollment Number:</label><br>
+                    <input type="text" id="student-enrollment" name="enrollment" required>
+                </p>
+                <p>
+                    <button type="submit">Confirm Participation</button>
+                </p>
+            </form>
+        </section>
+
+        <aside>
+            <h2>Event Guidelines</h2>
+            <p>Participants must carry valid CHARUSAT identity cards to the venue. Certificate of participation will be awarded upon completion.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <nav aria-label="Footer Navigation">
+            <a href="index.html">Home</a> |
+            <a href="contact.html">Contact Coordinators</a>
+        </nav>
+        <p>&copy; 2026 CHARUSAT Student Hub - Charotar University of Science and Technology</p>
+    </footer>
+</body>
+</html>
