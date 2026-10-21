@@ -2,11 +2,14 @@
 .DS_Store
 Thumbs.db
 
-# Generated PDF reports and external references
-*.pdf
+# Reports and external references
 reports/
 reference/
 scripts/
+
+# Ignore general PDFs except the official 14 practical submission files
+*.pdf
+!25DCE087_WDF_Practicals_PR1-PR14/*.pdf
 
 # Environment and sensitive configuration
 .env
