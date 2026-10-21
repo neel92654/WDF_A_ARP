@@ -313,7 +313,3 @@ Use the following pre-seeded credentials for testing and viva demonstration:
 - Verify the event appears in the list immediately with a green success alert, without the browser tab reloading!
 
 ---
-
-## Practical Viva Revision
-For full viva revision notes covering questions, answers, and implementation details for every practical, refer to:
-**`docs/viva-notes.md`**
